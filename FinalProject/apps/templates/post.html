@@ -1,0 +1,15 @@
+{% extends 'default.html' %}
+{% block title %}
+Объявление
+{% endblock title %}
+
+{% block content %}
+<h1>{{ post.head_name}}</h1>
+<h4>{{ post.author }}</h4>
+<h2>{{ post.article_text}}</h2>
+<h2>{{ post.image}}</h2>
+<h2>{{ post.file}}</h2>
+<a href="{% url 'com_create' %}">Откликнуться</a>
+<a href="{% url 'coms_list' %}">Отклики</a>
+<a href="{% url 'posts_list' %}">Назад к объявлениям</a>
+{% endblock content %}
