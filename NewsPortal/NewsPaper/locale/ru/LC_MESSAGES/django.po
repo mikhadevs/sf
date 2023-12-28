@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-30 20:13+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\news\filters.py:47
+msgid "Header"
+msgstr "Заголовок"
+
+#: .\news\filters.py:48
+msgid "Author"
+msgstr "Автор"
+
+#: .\news\models.py:35
+msgid "category name"
+msgstr "Категория"
+
+#: .\news\models.py:56
+msgctxt "help text for MyModel model"
+msgid "This is the help text"
+msgstr ""
+
+#: .\templates\flatpages\default.html:65
+msgid "News Portal"
+msgstr "Новостной портал"
+
+#: .\templates\flatpages\default.html:75
+msgid "Home"
+msgstr "Домой"
+
+#: .\templates\flatpages\default.html:80
+msgid "News"
+msgstr "Новости"
+
+#: .\templates\new.html:25 .\templates\news.html:40 .\templates\search.html:38
+msgid "Date created"
+msgstr "Дата создания"
+
+#: .\templates\new.html:26
+msgid "Content"
+msgstr "Содержание"
+
+#: .\templates\new.html:36
+msgid "No article!"
+msgstr "Нет статей"
+
+#: .\templates\news.html:14
+msgid "NEWS"
+msgstr "НОВОСТИ"
+
+#: .\templates\news.html:15
+msgid "All the news for today:"
+msgstr "Все новости на сегодня"
+
+#: .\templates\news.html:33
+msgid "Search"
+msgstr ""
+
+#: .\templates\news.html:39 .\templates\search.html:37
+msgid "Title new"
+msgstr "Заголовок"
+
+#: .\templates\news.html:41 .\templates\search.html:39
+msgid "Article content"
+msgstr "Содержание статьи"
+
+#: .\templates\news.html:53 .\templates\search.html:51
+msgid "No news!"
+msgstr "Нет новостей"
+
+#: .\templates\search.html:15
+msgid "Select the fields by which you want to filter:"
+msgstr "Выберите поля для фильтрации"
+
+#: .\templates\search.html:30
+msgid "Find"
+msgstr "Найти"

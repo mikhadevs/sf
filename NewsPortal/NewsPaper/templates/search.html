@@ -1,0 +1,74 @@
+{% extends 'default.html' %}
+{% load i18n %}
+
+{% load custom_filters %}
+
+{% load custom_tags %}
+
+{% block title %}
+Новость
+{% endblock title %}
+
+{% block content %}
+
+    <h2> {% trans "Выберети поля для фильтрации:" %}</h2>
+    <style>
+        table {
+	        border-spacing: 10px
+        }
+        td {
+        padding: 10px;
+        }
+    </style>
+
+ 
+   <form action="" method="get">
+
+       {{ filterset.form.as_p }}
+ 
+       <input type="submit" value="{% trans 'Найти' %}" />
+   </form>
+
+   <hr>
+   {% if news %}
+       <table>
+           <tr>
+               <td><h5>{% trans "Заголовок" %}</h5></td>
+               <td><h5>{% trans "Дата создания" %}</h5></td>
+               <td><h5>{% trans "Статья" %}</h5></td>
+           </tr>
+           {% for new in news %}
+           <tr>
+               <td><h6>{{ new.header }}</h6></td>
+               <td>{{ new.date_created|date:'M d Y' }}</td>
+               <td>{{ new.content|truncatechars:21|censor }}</td>
+           </tr>
+           {% endfor %}
+
+       </table>
+   {% else %}
+       <h2>{% trans "Новостей нет!" %}</h2>
+   {% endif %}
+
+
+   {% if page_obj.has_previous %}
+       <a href="?{% url_replace page=1 %}">1</a>
+       {% if page_obj.previous_page_number != 1 %}
+           ...
+           <a href="?{% url_replace page=page_obj.previous_page_number %}">{{ page_obj.previous_page_number }}</a>
+       {% endif %}
+   {% endif %}
+
+
+   {{ page_obj.number }}
+
+
+   {% if page_obj.has_next %}
+       <a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>
+       {% if paginator.num_pages != page_obj.next_page_number %}
+           ...
+           <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>
+       {% endif %}
+   {% endif %}
+
+{% endblock content %}

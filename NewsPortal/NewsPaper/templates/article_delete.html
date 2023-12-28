@@ -1,0 +1,24 @@
+{% extends 'default.html' %}
+
+{% block content %}
+<h1>Удалить статью</h1>
+<hr>
+<form action="" method="post">
+    {% csrf_token %}
+    <p>Delete "{{ object.header }}"?</p>
+    <input type="submit" value="Delete" />
+
+</form>
+    <style>
+   button {
+    background: #201e1b; 
+    color: #3a705a; 
+    border: none; 
+    padding: 0.2rem 1.2rem; 
+    margin-bottom: 1rem; 
+    margin-top:10px;
+   }
+   </style>
+<button type="button" class="orange" name="No"
+        onclick="document.location.href='{% url 'post_list' %}'">No</button>
+{% endblock content %}

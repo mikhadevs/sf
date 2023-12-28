@@ -1,0 +1,38 @@
+{% extends 'default.html' %}
+{% load i18n %}
+
+{% load custom_filters %}
+
+{% block title %}
+Новая
+{% endblock title %}
+
+{% block content %}
+   <h1>{{ new.header }}</h1>
+    <style>
+        table {
+	        border-spacing: 10px
+        }
+        td {
+        padding: 10px;
+        }
+    </style>
+
+   <hr>
+ {% if new %}
+       <table>
+           <tr>
+               <td><h5>{% trans "Date created" %}</h5></td>
+               <td><h5>{% trans "Content" %}</h5></td>
+           </tr>
+
+           <tr>
+               <td>{{ new.date_created|date:'d M Y' }}</td>
+               <td>{{ new.content|censor }}</td>
+           </tr>
+       </table>
+
+{% else %}
+       <h2>{% trans "Нет статей!" %}</h2>
+{% endif %}
+{% endblock content %}
